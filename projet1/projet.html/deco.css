@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../backgroud.png/pap.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+} 
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    background: rgba(39, 39, 39, 0);
+}
+.nav{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39,39,39, 0.6), transparent);
+    z-index: 100;
+}
+.nav-logo p{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+.nav-menu ul{
+    display: flex;
+}
+.nav-menu ul li{
+    list-style-type: none;
+}
+.nav-menu ul li .link{
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 15px;
+    margin: 0 25px;
+}
+.bx,.bx::before{display: none;}
+
+.link:hover, .active{
+    border-bottom: 2px solid #fff;
+}
+.hamburger{
+    display: none;
+}
+.nav-bar ul {
+    display: flex;
+}
+.nav-bar ul li{
+    position: relative;
+}
+.nav-bar ul li a {
+    display: block;
+    color: white;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+.nav-bar ul li a:hover{
+    color:white ;
+    background-color: #6C22A6;
+}
+.nav-bar ul li a.active {
+    color:white;
+    background-color: #6C22A6;
+}
+
+.Contact-container{height: 100vh;width: 100vw;background: #000;}
+
+@media only screen and (max-width:1320px){
+    header { 
+        padding: 0 50px;
+    }
+    }
+@media only screen and (max-width:1100px){
+    header { 
+        padding: 0 30px;
+    }
+}
+@media only screen and (max-width:900px){
+    body{
+        background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)) ,url(../backgroud.png/phototele.jpg)
+    }
+    .nav-button{
+        display: none;
+    }
+    .nav-menu.responsive{
+        top: 100px;
+    }
+    .nav-menu{
+        position: absolute;
+        top: -800px;
+        display: flex;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.2);
+        width: 100%;
+        height: 90vh;
+        backdrop-filter: blur(20px);
+        transition: .3s;
+    }
+    .nav-menu ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-menu-btn{
+        display: block;
+    }
+    .nav-menu-btn i{
+        font-size: 25px;
+        color: #fff;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    .bx{
+        display: block;
+        font-family: boxicons!important;
+        font-weight: 400;
+        font-style: normal;
+        font-variant: normal;
+        line-height: 1;
+        text-rendering: auto;
+        display: inline-block;
+        text-transform: none;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .bx::before{
+        display: block;
+        content: "\eb5f";
+    }
+
+
+    .nav-menu-btn i:hover{
+        background: rgba(255, 255, 255, 0.15);
+    }
+    .nav-bar{
+        height:0px;
+        position: absolute;
+        top: 80px;
+        left:0;
+        right:0;
+        width: 100vw;
+        background: transparent;
+        transition: 0.2s;
+        overflow: hidden;
+    }
+    .nav-bar.active{
+        height: 400px;
+    }
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin:80px auto 0 auto;
+        text-align: center ;
+        transition: 0.5s;
+        opacity:0 ;
+        justify-content: center;
+    }
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+    .nav-bar ul li a {
+        margin-bottom:12px;
+    }
+    .content h1{
+        font-size: 60px;
+        margin-top: 60px;
+    }
+    .content{
+        position:fixed ;
+        width: 100%;
+        top:25% ;
+        text-align: center;
+        color: white;
+    }
+    .content p{
+        margin: 20px auto;
+        font-weight: 100;
+        line-height: 25px;
+    }
+}
+@media only screen and (min-width:900px){
+    .content{
+        position:fixed ;
+        width: 100%;
+        top:50% ;
+        transform: translateY(-50%);
+        text-align: center;
+        color: white;
+    }
+    .content h1{
+    font-size: 50px;
+    margin-top: 80px;
+    }
+    .content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    }
+    .nav-bar ul li:hover .dropdown__menu{
+        display: block;
+        position: absolute;
+        left: 0;
+        left: 150px;
+        background-color: var(--color-black);
+    }
+    .dropdown__menu {
+        display: none;
+    }
+    .dropdown__menu ul li{
+        width: 150px;
+    
+    }
+    .fas{
+        float: right;
+        margin-left:10px ;
+        padding-top: 3px;
+    }
+}
+.button{
+    width:200px ;
+    padding: 15px;
+    text-align: center;
+    max-width: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 3px solid #6C22A6;
+    background: transparent;
+    font-size: 1rem;
+    color: #EEF5FF;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Caveat', cursive;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+.button span{
+    background: #6C22A6;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+.button:hover span{
+    width: 100%;
+}
+.button:hover{
+    border: none;
+}
+.dropdown__menu{
+    display: none;
+}
+.nav-bar ul li:hover .dropdown__menu{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: transparent;
+}
+.dropdown__menu ul{
+    display: block;
+}
+.dropdown__menu ul li{
+    width: 150px;
+
+}
+header div img{ 
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 600;
+} 
+.fa-person-swimming{
+    color: #6C22A6;
+    margin-left: 10px;
+}
+span{
+    font-size: 35px;
+}
+.content{
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Caveat', cursive;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
